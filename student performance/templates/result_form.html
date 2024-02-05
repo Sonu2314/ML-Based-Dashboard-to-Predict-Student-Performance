@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Predicted Marks</title>
+ <style>
+     body {
+        background-color: brown;
+     }
+     .main {
+        top: 50%;
+        margin: auto;
+        text-align: center;
+        font-size: large;
+        color: white;
+        font-size: x-large;
+    }
+    strong {
+       color: aqua;
+    }
+ </style>
+ </head>
+ <body>
+     <div class="main">
+        <h3>Details:</h3>
+        <div>Gender : <strong>{{ gender }}</strong></div>
+        <div>Race/ethnicity : <strong>{{ race }}</strong></div>
+        <div>Parental level of education : <strong>{{ education }}</strong></div>
+        <div>Type of lunch : <strong>{{ lunch }}</strong></div>
+        <div>Test preparation course : <strong>{{ course }}</strong></div>
+        
+        <h3>Marks Prediction:</h3>
+       
+       
+        <div>The predicted maths marks are <strong>{{ math_score }}</strong></div>
+        <div>The predicted reading marks are <strong>{{ reading_score }}</strong></div>
+        <div>The predicted writing marks are <strong>{{ writing_score }}</strong></div>
+     </div>
+
+
+ </body>
+</html>

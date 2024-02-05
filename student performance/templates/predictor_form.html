@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Details form</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-color: brown;
+    }
+    .main {
+        
+        margin: auto;
+        text-align: center;
+    }
+    select {
+        width: 250px;
+        padding: 10px;
+        border-radius:36px;
+        text-align-last:center;
+        
+    }
+   
+    div {
+        padding: 10px;
+    }
+    h1 {
+        color: blanchedalmond;
+    }
+</style>
+    </head>
+   <body>
+      <div class="main">
+        <h1>Student Mark Prediction</h1>
+        <form action = "/result" method = "POST">
+        <select name="gender" id="" class="form-select">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <div></div>
+        <select name="race" id="" class="form-select">
+            <option value="" disabled selected>Race/ethnicity</option>
+            <option value="group A">Group A</option>
+            <option value="group B">Group B</option>
+            <option value="group C">Group C</option>
+            <option value="group D">Group D</option>
+            <option value="group E">Group E</option>
+        </select>
+        <div></div>
+        <select name="education" id="" class="form-select">
+            <option value="" disabled selected>Parent's education</option>
+            <option value="master's degree">Masters</option>
+            <option value="bachelor's degree">Bachelors</option>
+            <option value="associate's degree">Associate</option>
+            <option value="some college">College</option>
+            <option value="high school">High school</option>
+            <option value="some high school">Some high school</option>
+        </select>
+        <div></div>
+        <select name="lunch" id="" class="form-select">
+            <option value="" disabled selected>Payment mode of lunch</option>
+            <option value="standard">Standard</option>
+            <option value="free/reduced">Free/reduced</option>
+        </select>
+        <div></div>
+        <select name="course" id="" class="form-select">
+            <option value="" disabled selected>Test Preparation Course</option>
+            <option value="completed">Completed</option>
+            <option value="none">Not completed</option>
+        </select> 
+        <div></div>
+         <button type="submit" class="btn btn-warning ">Submit</button>
+      </form>
+      <form action = "/visualisation" method = "POST">
+        <button type="submit" class="btn btn-warning ">See Visualisation</button>
+        </form>
+      <!--a class="btn btn-primary" href="E:/books/SEM 6/Data Mining and Business Intelligence/project/templates/Report.html" role="button">See Visualisation</a-->
+      <h3>By -: Soundarya</h3>
+      <div>
+   </body>
+</html>

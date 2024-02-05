@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylb.css') }}">
+
+<style>
+
+.login{
+top: 20%;
+}
+mark {
+ background-color: #eff213;
+  text-align: center;
+}
+mark1 {
+ background-color: #3c0170;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+ <div class="login">
+	<h2><mark>To Predict silica(impurity) %<br> without Iron ore concentrate</mark></h2>
+
+	
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('y_predict')}}"method="post">
+
+    	<input type="number" name="% Iron Feed" placeholder="% Iron Feed" required="required" />
+        <input type="number" name="% Silica Feed" placeholder="% Silica Feed" required="required" />
+		<input type="number" name="Starch Flow" placeholder="Starch Flow" required="required" />
+		<input type="number" name="Amina Flow" placeholder="Amina Flow" required="required" />
+                <input type="number" name="Ore Pulp Flow" placeholder="Ore Pulp Flow" required="required" />
+                <input type="number" name="Ore Pulp pH" placeholder="Ore Pulp pH" required="required" />
+                <input type="number" name="Ore Pulp Density" placeholder="Ore Pulp Density" required="required" />
+                <input type="number" name="Flotation Column 1234567 Level" placeholder="Flotation Column 1234567 Level" required="required" />
+                <input type="number" name="Flotation Column 1234567 Air Flow" placeholder="Flotation Column 1234567 Air Flow" required="required" />
+		
+		</select>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    
+    </form>
+
+   <br>
+   <br><mark1>
+   {{ prediction_text }}</mark1>
+ </div>
+
+
+</body>
+</html>
+
